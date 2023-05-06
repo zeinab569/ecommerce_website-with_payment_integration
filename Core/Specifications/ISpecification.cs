@@ -14,5 +14,11 @@ namespace Core.Specifications
         Expression<Func<T, bool>> Criteria{ get; }
         //add function to include
         List<Expression<Func<T, object>>> Includes { get;}
+        //Sorting
+        Expression<Func<T,object>> OrderBy { get; }
+        Expression<Func<T, object>> OrderByDesending { get; }
+        int Take { get; }
+        int Skip { get; }
+        bool ispagingEnable { get; }
     }
 }

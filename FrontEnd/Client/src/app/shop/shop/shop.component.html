@@ -1,0 +1,90 @@
+
+<div class="container">
+     <div class=" row row-cols-3 mp-4">
+   
+      <!-- first section -->
+     <div class="col col-lg-3">
+       <!-- sorting -->
+       <div>
+         <div class="col-md-8">
+           <label for="state" class="form-label">Sort</label>
+           <select class="form-select" id="state" required="" (change)="OnSortSelected($event)">
+            <option *ngFor="let item of sortOptions" [value]="item.value">
+                {{item.name}}
+            </option>
+           </select>
+         </div>
+       </div>
+   
+       <!-- Brand -->
+       <div>
+         <p class="text-warning ms-3">Brands</p>
+         <ul class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px list-group my-3" data-bs-theme="light">
+           <li class="dropdown-item rounded-2  list-group-item"  href="#" *ngFor="let item of brands"
+               [class.active]="item.id===shopparams.brandId"
+               [value]="item.id"
+               (click)="OnBrandSelected(item.id)" >
+             {{item.name}}
+           </li>
+            
+         </ul>
+       </div>
+
+       <!-- Type -->
+       <div>
+         <p class="text-warning ms-3">Types</p>
+         <ul class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow w-220px list-group my-3" data-bs-theme="light">
+          <li class="dropdown-item rounded-2 list-group-item " href="#" *ngFor="let item of types"
+            [class.active]="item.id===shopparams.typeId"
+               [value]="item.id"
+               (click)="OnTypeSelected(item.id)" >
+            {{item.name}}</li>  
+         </ul>
+       </div>
+     </div>
+   
+
+     <!-- section  part -->
+    <section class="col col-lg-9">
+
+      <div class="d-flex justify-content-between align-items-center pd-2">
+
+        <!-- header pagination -->
+        <app-paging-header
+          [totalCount]="totalCount"
+          [pageSize]="shopparams.pageSize"
+          [pageNumber]="shopparams.pageNumber">
+        </app-paging-header>
+        
+        <!-- searching  -->
+        <div class="d-flex mt-2">
+          <input type="search" (keyup.enter)="OnSearch()"  class="form-control" placeholder="Search..." aria-label="Search" #search>
+          <button (click)="OnSearch()"  class="btn btn-outline-secondary me-2">Search</button>
+          <button (click)="OnReset()"  class="btn btn-outline-secondary me-2"> Reset</button>
+        </div>
+
+      </div>
+       
+      <!-- second part of section cards of prpoducts -->
+      <div class="row row-cols-3 mp-4" id="cardshow">
+        <div class="col" *ngFor="let item of products">
+          <app-shopitem [product]="item"></app-shopitem>
+        </div>
+      </div>
+    
+                   <!-- pagination -->
+    <div class="row justify-content-md-center" *ngIf="totalCount >0">
+     <app-pager
+        [totalCount]="totalCount"
+        [pageSize]="shopparams.pageSize"
+        (pageChanged)="OnPageChanged($event)"
+     >
+     </app-pager>
+
+      </div>
+    </section>
+ 
+     </div>
+
+   </div>
+

@@ -1,5 +1,6 @@
 ﻿
 using API.Dtos;
+using API.Helpers;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -14,7 +15,7 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductController : BaseApiController
     {
        // private readonly IProductRepo _productrepository;
         private readonly IGenericRepo<ProductBrand> _brandRepository;
@@ -32,11 +33,17 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductToReturnDto>>> GetProducts()
+        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams productparams)
         {
-            var spec = new ProductWithTypeAndBrand();
+
+            var spec = new ProductWithTypeAndBrand(productparams);
+            var countspec = new ProductFilterWithCountSpec(productparams);
+
+            var totalitem = await _productRepository.CountAsync(countspec);
             var products = await _productRepository.ListAsync(spec);
-            return Ok(_mapper.Map<IReadOnlyList<Product>,IReadOnlyList<ProductToReturnDto>>(products));
+            var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
+
+            return Ok(new Pagination<ProductToReturnDto>(productparams.PageIndex,productparams.PageSize,totalitem,data));
 
             //return products.Select(Product => new ProductToReturnDto()
             //{
