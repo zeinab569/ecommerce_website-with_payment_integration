@@ -1,28 +1,60 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\1.jpg.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\1.jpg.jpg"
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\2.jpg.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\2.jpg.jpg"
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\10.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\10.jpg"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\3.jpg.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\3.jpg.jpg"
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\11.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\11.jpg"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\4.jpg.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\4.jpg.jpg"
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\12.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\12.jpg"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\5.jpg.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\5.jpg.jpg"
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\13.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\13.jpg"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\6.jpg.jpg",
-      "PackagePath": "staticwebassets\\images\\products\\6.jpg.jpg"
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\14.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Documents\\Asp&Angular\\API\\wwwroot\\images\\products\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\9.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",

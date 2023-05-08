@@ -12,8 +12,7 @@ export class ShopitemComponent implements OnInit{
   
   constructor() {}
   ngOnInit(): void {
-    console.log(this.product?.pictureUrl)
-    //throw new Error('Method not implemented.');
+   
   }
 
   

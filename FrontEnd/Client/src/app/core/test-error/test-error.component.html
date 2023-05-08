@@ -1,1 +1,6 @@
-<p>test-error works!</p>
+<div class="container mt-5">
+    <button (click)="get500Error()" class="btn btn-outline-primary me-3">Get server Error</button>
+    <button (click)="get400Error()" class="btn btn-outline-primary me-3">Get badrequest Error</button>
+    <button (click)="get404Error()" class="btn btn-outline-primary me-3">Get NotFound Error</button>
+    <button (click)="get400validationError()" class="btn btn-outline-primary me-3">Get validation Error</button>
+</div>
