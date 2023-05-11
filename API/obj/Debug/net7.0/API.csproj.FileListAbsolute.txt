@@ -64,3 +64,15 @@ C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Core.pdb
 C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\StackExchange.Redis.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\lenovo\Documents\Asp&Angular\API\bin\Debug\net7.0\System.Security.Permissions.dll

@@ -1,12 +1,12 @@
-.cart-no{
-  position: relative;
-  min-height: 20px;
-  min-width: 20px;
+.cart-no {
+  position: absolute;
+  min-height: 25px;
+  min-width: 25px;
   border-radius: 50%;
-  color: white;
   background: blue;
+  color: white;
   text-align: center;
-  top:-12px;
+  top: -12px;
   right: 32px;
 }
   
@@ -18,3 +18,4 @@ a.active{
   color:orange;
   
 }
+

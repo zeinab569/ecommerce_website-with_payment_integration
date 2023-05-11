@@ -6,11 +6,18 @@
   <div class="col-6 mt-5">
     <h2>{{product.name}}</h2>
     <p>{{product.price |currency}}</p>
+    <h5 class="text-primary mb-3" *ngIf="quentityInbBasket >0 ">
+      You have {{quentityInbBasket}} of this item in Basket
+    </h5>
     <div class="d-flex justify-content-start align-items-center">
-      <i class="fa fa-minus-circle text-warning me-2" style="cursor: pointer; font-size: 2em;"></i>
-      <span class="font-weight-bold" style="font-size: 1.5em;">2</span>
-      <i class="fa fa-plus-circle text-warning me-2" style="cursor: pointer; font-size: 2em;"></i>
-      <button class="btn btn-outline-secondary ms-4">Add to cart</button> 
+      <i class="fa fa-minus-circle text-warning me-2" 
+      (click)="decreamentQuenttity()"
+      style="cursor: pointer; font-size: 2em;"></i>
+      <span class="font-weight-bold" style="font-size: 1.5em;">{{quentity}}</span>
+      <i class="fa fa-plus-circle text-warning me-2"
+      (click)="increamentQuentity()"
+      style="cursor: pointer; font-size: 2em;"></i>
+      <button class="btn btn-outline-secondary ms-4" [disabled]="quentity===quentityInbBasket" (click)="updateBasket()">{{getText}}</button> 
     </div>
     <div class="row mt-4">
       <h4>Description</h4>

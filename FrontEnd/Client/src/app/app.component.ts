@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from './account/account.service';
+import { BasketService } from './basket/basket.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Store App';
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient , private basketserbvice:BasketService,private accountServices:AccountService) { }
   products:any[]=[];
 
   ngOnInit(): void {
@@ -19,7 +21,13 @@ export class AppComponent implements OnInit {
       complete:()=>{
         console.log("completed")
       }
-    });
-   
+    })
+    const basketId= localStorage.getItem("basket_Id");
+    if(basketId) this.basketserbvice.getBasket(basketId)   
+  }
+
+  loadCurrentUser(){
+    const token = localStorage.getItem('token');
+    this.accountServices.loadCurrentUser(token).subscribe();
   }
 }
