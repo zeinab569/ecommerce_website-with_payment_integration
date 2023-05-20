@@ -20,6 +20,11 @@ namespace Infrastuctre.Data
             _context = context;
         }
 
+        public void Add(T entity)
+        {
+            _context.Set<T>().Add(entity);
+        }
+
         public async Task<int> CountAsync(ISpecification<T> spec)
         {
             return await ApplaySpecification(spec).CountAsync();
@@ -45,6 +50,16 @@ namespace Infrastuctre.Data
             return await ApplaySpecification(spec).ToListAsync();
         }
 
+        public void Remove(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+        }
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
+        }
 
         private IQueryable<T> ApplaySpecification(ISpecification<T> spec)
         {

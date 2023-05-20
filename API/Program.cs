@@ -62,6 +62,9 @@ builder.Services.AddScoped<IBasketRepo, BasketRepo>();
 builder.Services.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ITokenServices, TokenServices>();
+builder.Services.AddScoped<IOrderServices, OrderServices>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
   {
       var options = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
