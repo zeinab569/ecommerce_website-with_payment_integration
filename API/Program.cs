@@ -56,6 +56,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 builder.Services.AddAuthorization();
 
+//Redis
+builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
+{
+    var options = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
+    return ConnectionMultiplexer.Connect(options);
+});
+
 
 builder.Services.AddScoped<IProductRepo,ProductRepo>();
 builder.Services.AddScoped<IBasketRepo, BasketRepo>();
@@ -65,12 +72,7 @@ builder.Services.AddScoped<ITokenServices, TokenServices>();
 builder.Services.AddScoped<IOrderServices, OrderServices>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
-  {
-      var options = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
-      options.PreserveAsyncOrder = false;
-      return ConnectionMultiplexer.Connect(options);
-  });
+
 
 //add swager autherize 
 builder.Services.AddSwaggerGen(c =>
@@ -131,7 +133,8 @@ app.UseStatusCodePagesWithReExecute("errors/{0}");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseCors("CorsPolicy");
+//"CorsPolicy"
+//app.UseCors();
 app.UseAuthentication();
 app.UseRouting();
 app.UseAuthorization();

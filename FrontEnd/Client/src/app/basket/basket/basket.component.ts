@@ -19,8 +19,9 @@ export class BasketComponent implements OnInit {
     this.basketService.addItemToBasket(item)
 
   }
-  removeItem(id:number ,quentity:number){
-    this.basketService.removeItemFromBasket(id,quentity)
+
+  removeItem(event:{id:number ,quentity:number}){
+    this.basketService.removeItemFromBasket(event.id,event.quentity)
   }
 
 }
